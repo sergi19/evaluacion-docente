@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition 
+	  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      template="/WEB-INF/templates/default.xhtml">
+      
+<h:head>
+	
+</h:head>
+
+<body>
+	
+	<ui:define name="contenido">
+			<div class="cont">
+
+	<h:form id="form" prependId="false" class="formu">
+			
+				<h:outputLabel value="#{msj['usuario.pagina']}" class="titulo"/>
+
+				<br></br>
+				<p:inputText value="#{usuarioWeb.nombre}" id="nombre" class="inp" 
+				placeholder="#{msj['usuario.nombre']}"/>
+
+				<p:inputText value="#{usuarioWeb.apellido}" id="apellido" class="inp" 
+				placeholder="#{msj['usuario.apellido']}"/>
+
+				<p:inputText value="#{usuarioWeb.id}" id="cedula" class="inp"
+				placeholder="#{msj['usuario.cedula']}" validator="campos"
+				required="true"/>
+				<p:message for="cedula" style="color:red"/>
+
+
+				<p:inputText value="#{usuarioWeb.user}" id="usuario" class="inp"
+				placeholder="#{msj['usuario.usuario']}"/>
+
+				<p:password value="#{usuarioWeb.password}" id="contrasenia" class="inp" 
+				placeholder="#{msj['usuario.contrasenia']}"/>
+				
+				<h:selectOneMenu value="#{usuarioWeb.usuarioSeleccionado}" id="tipousuario" class="styled-select blue semi-square">
+					<f:selectItem itemValue='0' itemLabel = 'Tipo usuario'/>
+					<f:selectItem itemValue='1' itemLabel = 'Decano'/>	
+					<f:selectItem itemValue='2' itemLabel = 'Coordinador'/>	
+					<f:ajax event="change" render="areas" execute="@this" >
+					</f:ajax>		
+				</h:selectOneMenu>
+				
+				
+				
+				<h:panelGroup id="areas" >
+				
+					<h:outputLabel value="Facultad" for="cbFacultades" rendered="#{usuarioWeb.cargarFacultad()}"/>
+					<h:selectOneMenu rendered="#{usuarioWeb.cargarFacultad()}" 
+					   value="#{usuarioWeb.facultadSeleccionada}" id="cbFacultades"
+					   require="true" converter="#{convertidorFacultad}"  class="styled-select blue semi-square">
+						<f:selectItems value="#{usuarioWeb.facultad}" var="fa"
+						itemValue="#{fa}" itemLabel = "#{fa.nombre}"/>
+					</h:selectOneMenu>
+					
+					<h:outputLabel value="Programa" for="cbProgramas" rendered="#{usuarioWeb.cargarPrograma()}"/>
+					<h:selectOneMenu rendered="#{usuarioWeb.cargarPrograma()}" 
+					   value="#{usuarioWeb.programaSeleccionado}" id="cbProgramas"
+					   require="true" converter="#{convertidorPrograma}"  class="styled-select blue semi-square">
+						<f:selectItems value="#{usuarioWeb.programa}" var="pro"
+						itemValue="#{pro}" itemLabel = "#{pro.nombrePrograma}"/>
+					</h:selectOneMenu>
+					
+				</h:panelGroup>
+			
+			
+				<h:commandButton action="#{usuarioWeb.crear()}" value="Crear" class="boton"/>
+			
+			</h:form>
+		</div>
+	</ui:define>
+		
+	
+
+</body>	
+	
+</ui:composition>
+
+
+
+
+
