@@ -28,10 +28,10 @@ public class Facultad implements Serializable {
 	
 	@Id
 	@Column(name = "idFacultad")
-	public String idFacultad;
+	private String idFacultad;
 	
 	@Column(name = "nombre")
-	public String nombre;
+	private String nombre;
 
 	// Constructor vacio
 	public Facultad() {

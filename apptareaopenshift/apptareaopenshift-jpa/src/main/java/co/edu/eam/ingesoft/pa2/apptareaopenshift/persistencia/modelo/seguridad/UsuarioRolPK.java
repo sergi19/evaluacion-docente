@@ -6,12 +6,12 @@ public class UsuarioRolPK implements Serializable {
 
 	private int usuario;
 
-	private int rol;
+	private Long rol;
 
 	public UsuarioRolPK() {
 	}
 
-	public UsuarioRolPK(int usuario, int rol) {
+	public UsuarioRolPK(int usuario, long rol) {
 		super();
 		this.usuario = usuario;
 		this.rol = rol;
@@ -25,11 +25,11 @@ public class UsuarioRolPK implements Serializable {
 		this.usuario = usuario;
 	}
 
-	public int getRol() {
+	public long getRol() {
 		return rol;
 	}
 
-	public void setRol(int rol) {
+	public void setRol(long rol) {
 		this.rol = rol;
 	}
 
@@ -37,10 +37,8 @@ public class UsuarioRolPK implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + rol;
+		result = prime * result + ((rol == null) ? 0 : rol.hashCode());
 		result = prime * result + usuario;
-//		result = prime * result + ((rol == null) ? 0 : rol.hashCode());
-//		result = prime * result + ((usuario == null) ? 0 : usuario.hashCode());
 		return result;
 	}
 
@@ -53,21 +51,16 @@ public class UsuarioRolPK implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		UsuarioRolPK other = (UsuarioRolPK) obj;
-		if (rol != other.rol)
+		if (rol == null) {
+			if (other.rol != null)
+				return false;
+		} else if (!rol.equals(other.rol))
 			return false;
 		if (usuario != other.usuario)
 			return false;
-//		if (rol == null) {
-//			if (other.rol != null)
-//				return false;
-//		} else if (!rol.equals(other.rol))
-//			return false;
-//		if (usuario == null) {
-//			if (other.usuario != null)
-//				return false;
-//		} else if (!usuario.equals(other.usuario))
-//			return false;
 		return true;
 	}
+
+	
 	
 }

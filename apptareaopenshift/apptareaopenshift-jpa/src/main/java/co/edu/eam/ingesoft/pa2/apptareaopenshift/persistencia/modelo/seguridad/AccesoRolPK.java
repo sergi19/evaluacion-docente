@@ -6,12 +6,12 @@ public class AccesoRolPK implements Serializable {
 
 	private int acceso;
 	
-	private int rol;
+	private Long rol;
 
 	public AccesoRolPK() {
 	}
 
-	public AccesoRolPK(int acceso, int rol) {
+	public AccesoRolPK(int acceso, Long rol) {
 		super();
 		this.acceso = acceso;
 		this.rol = rol;
@@ -25,11 +25,11 @@ public class AccesoRolPK implements Serializable {
 		this.acceso = acceso;
 	}
 
-	public int getRol() {
+	public Long getRol() {
 		return rol;
 	}
 
-	public void setRol(int rol) {
+	public void setRol(Long rol) {
 		this.rol = rol;
 	}
 
@@ -37,8 +37,8 @@ public class AccesoRolPK implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-//		result = prime * result + ((acceso == null) ? 0 : acceso.hashCode());
-//		result = prime * result + ((rol == null) ? 0 : rol.hashCode());
+		result = prime * result + acceso;
+		result = prime * result + ((rol == null) ? 0 : rol.hashCode());
 		return result;
 	}
 
@@ -53,19 +53,14 @@ public class AccesoRolPK implements Serializable {
 		AccesoRolPK other = (AccesoRolPK) obj;
 		if (acceso != other.acceso)
 			return false;
-		if (rol != other.rol)
+		if (rol == null) {
+			if (other.rol != null)
+				return false;
+		} else if (!rol.equals(other.rol))
 			return false;
-//		if (acceso == null) {
-//			if (other.acceso != null)
-//				return false;
-//		} else if (!acceso.equals(other.acceso))
-//			return false;
-//		if (rol == null) {
-//			if (other.rol != null)
-//				return false;
-//		} else if (!rol.equals(other.rol))
-//			return false;
 		return true;
 	}
+
+	
 	
 }

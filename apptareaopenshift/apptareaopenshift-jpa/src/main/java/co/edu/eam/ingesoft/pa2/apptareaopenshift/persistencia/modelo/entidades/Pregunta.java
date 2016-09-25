@@ -11,6 +11,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -19,8 +21,11 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Preguntas")
+@NamedQueries({ @NamedQuery(name = Pregunta.LISTAR_PREGUNTAS, query = "SELECT p FROM Pregunta p")})
 public class Pregunta implements Serializable {
 
+	public static final String LISTAR_PREGUNTAS = "Pregunta.listarPreguntas";
+	
 	@Id
 	@Column(name = "idPregunta")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

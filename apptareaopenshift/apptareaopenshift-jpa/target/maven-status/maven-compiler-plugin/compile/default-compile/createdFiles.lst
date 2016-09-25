@@ -7,9 +7,11 @@ co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\PregEval
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\Evaluacion.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\Decano.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\seguridad\UsuarioRol.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\PregEvalPK.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\Docente.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\seguridad\UsuarioRolPK.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\Pregunta.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\ResPregPK.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\dao\DAOGenerico.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\entidades\Grupo.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\persistencia\modelo\seguridad\Rol.class

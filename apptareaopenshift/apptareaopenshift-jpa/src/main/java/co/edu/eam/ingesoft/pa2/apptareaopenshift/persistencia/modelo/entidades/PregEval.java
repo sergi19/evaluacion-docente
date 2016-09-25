@@ -9,25 +9,24 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-/**
- * @author Alejandro
- *
- */
+
 @Entity
 @Table(name = "PreguntasEval")
+@IdClass(value=PregEvalPK.class)
 public class PregEval implements Serializable {
 	
+
 	@Id
-	@Column(name="idPreguntasEval")
-	private int idPregEval;
-	
-	@Column(name = "idPregunta")
+	@ManyToOne
+	@JoinColumn(name = "idPregunta")
 	private Pregunta idPregunta;
 	
+	@Id
 	@ManyToOne
 	@JoinColumn(name = "idEvaluacion")
 	private Evaluacion idEvaluacion;

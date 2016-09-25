@@ -1,5 +1,7 @@
 package co.edu.eam.ingesoft.pa2.apptareaopenshift.negocio.implementaciones;
 
+import java.util.List;
+
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
@@ -14,4 +16,11 @@ public class PreguntaEJB extends EJBGenerico<Pregunta> implements PreguntaRemote
 		// TODO Auto-generated method stub
 		return Pregunta.class;
 	}
+
+	@Override
+	public List<Pregunta> listarPreguntas() {
+		return dao.ejecutarNamedQuery(Pregunta.LISTAR_PREGUNTAS);
+	}
+
+	
 }

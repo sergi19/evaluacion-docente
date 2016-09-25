@@ -2,7 +2,9 @@ co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\AsignaturaEJB
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\ProgramaEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\UsuarioRemotoEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\SeguridadEJB.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\DocenteRemoteEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\service\MemberRegistration.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\GrupoRemoteEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\UsuarioEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\ProgramaRemoteEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\excepciones\ExcepcionNegocio.class
@@ -11,10 +13,12 @@ co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\AsignaturaRemoteEJB
 co\edu\eam\ingesoft\pa2\apptareaopenshift\util\Resources.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\FacultadEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\InterfaceEJBGenerica.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\GrupoEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\PreguntaEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\FacultadRemoteEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\data\MemberRepository.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\data\MemberListProducer.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\WebServicesEJB.class
+co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\DocenteEJB.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\implementaciones\EJBGenerico.class
 co\edu\eam\ingesoft\pa2\apptareaopenshift\negocio\interfaces\PreguntaRemoteEJB.class

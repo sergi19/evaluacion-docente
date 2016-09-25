@@ -13,6 +13,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,8 +25,11 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "Grupos")
+@NamedQueries({ @NamedQuery(name = Grupo.LISTAR_GRUPOS, query = "SELECT g FROM Grupo g")})
 public class Grupo implements Serializable {
 
+	public static final String LISTAR_GRUPOS ="Grupo.listarGrupos";
+	
 	@Id
 	@Column(name = "idGrupo")
 	private String idGrupo;
